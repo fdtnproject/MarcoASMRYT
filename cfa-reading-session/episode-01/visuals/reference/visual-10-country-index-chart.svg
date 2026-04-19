@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Arithmetic and Geometric Mean Return Chart</title>
+  <desc id="desc">Original bar-style chart showing geometric means below arithmetic means across countries.</desc>
+  <rect width="1200" height="760" fill="#071018"/>
+  <text x="70" y="78" fill="#b8d6ff" font-family="Arial, sans-serif" font-size="23" letter-spacing="3">EXHIBIT 6 REFERENCE</text>
+  <text x="70" y="132" fill="#eef6ff" font-family="Georgia, serif" font-size="46">Arithmetic vs Geometric Mean Returns</text>
+  <text x="70" y="172" fill="#b9cadb" font-family="Arial, sans-serif" font-size="23">Green = geometric mean. Gold = arithmetic mean. Geometric is never above arithmetic.</text>
+
+  <line x1="520" y1="220" x2="520" y2="680" stroke="#8fb5e6" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" font-size="19">
+    <text x="360" y="708" fill="#9cb7d3">-6%</text>
+    <text x="515" y="708" fill="#9cb7d3">0%</text>
+    <text x="675" y="708" fill="#9cb7d3">+3%</text>
+    <text x="835" y="708" fill="#9cb7d3">+6%</text>
+    <text x="70" y="224" fill="#d7e7ff" font-weight="700">Country</text>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="20" fill="#eef6ff">
+    <text x="85" y="260">A</text><rect x="233" y="242" width="287" height="12" fill="#4cc6a1"/><rect x="247" y="260" width="273" height="12" fill="#f4c76d"/>
+    <text x="85" y="300">B</text><rect x="520" y="282" width="219" height="12" fill="#4cc6a1"/><rect x="520" y="300" width="224" height="12" fill="#f4c76d"/>
+    <text x="85" y="340">C</text><rect x="520" y="322" width="177" height="12" fill="#4cc6a1"/><rect x="520" y="340" width="178" height="12" fill="#f4c76d"/>
+    <text x="85" y="380">D</text><rect x="520" y="362" width="8" height="12" fill="#4cc6a1"/><rect x="520" y="380" width="12" height="12" fill="#f4c76d"/>
+    <text x="85" y="420">E</text><rect x="446" y="402" width="74" height="12" fill="#4cc6a1"/><rect x="449" y="420" width="71" height="12" fill="#f4c76d"/>
+    <text x="85" y="460">F</text><rect x="520" y="442" width="169" height="12" fill="#4cc6a1"/><rect x="520" y="460" width="171" height="12" fill="#f4c76d"/>
+    <text x="85" y="500">G</text><rect x="520" y="482" width="315" height="12" fill="#4cc6a1"/><rect x="520" y="500" width="324" height="12" fill="#f4c76d"/>
+    <text x="85" y="540">H</text><rect x="520" y="522" width="199" height="12" fill="#4cc6a1"/><rect x="520" y="540" width="199" height="12" fill="#f4c76d"/>
+    <text x="85" y="580">I</text><rect x="520" y="562" width="305" height="12" fill="#4cc6a1"/><rect x="520" y="580" width="306" height="12" fill="#f4c76d"/>
+    <text x="85" y="620">J</text><rect x="520" y="602" width="197" height="12" fill="#4cc6a1"/><rect x="520" y="620" width="201" height="12" fill="#f4c76d"/>
+    <text x="85" y="660">K</text><rect x="520" y="642" width="282" height="12" fill="#4cc6a1"/><rect x="520" y="660" width="286" height="12" fill="#f4c76d"/>
+  </g>
+
+  <rect x="900" y="224" width="210" height="86" rx="16" fill="#102131" stroke="#547eab"/>
+  <rect x="930" y="248" width="28" height="12" fill="#4cc6a1"/><text x="970" y="262" fill="#eef6ff" font-family="Arial, sans-serif" font-size="19">Geometric</text>
+  <rect x="930" y="280" width="28" height="12" fill="#f4c76d"/><text x="970" y="294" fill="#eef6ff" font-family="Arial, sans-serif" font-size="19">Arithmetic</text>
+</svg>

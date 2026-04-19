@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Question Set 10 Year Returns</title>
+  <desc id="desc">Original reference card for the ten-year return question set.</desc>
+  <rect width="1200" height="720" fill="#071018"/>
+  <text x="80" y="92" fill="#b8d6ff" font-family="Arial, sans-serif" font-size="24" letter-spacing="3">EXHIBIT 9 / QUESTION SET REFERENCE</text>
+  <text x="80" y="148" fill="#eef6ff" font-family="Georgia, serif" font-size="48">Ten-Year Return Series</text>
+  <text x="80" y="190" fill="#b9cadb" font-family="Arial, sans-serif" font-size="24">Used to test arithmetic mean return over a longer sample</text>
+
+  <g font-family="Arial, sans-serif" font-size="24">
+    <rect x="80" y="245" width="1040" height="76" rx="18" fill="#0f1d2b" stroke="#567ea8"/>
+    <text x="120" y="293" fill="#d7e7ff" font-weight="700">Year</text>
+    <text x="260" y="293" fill="#d7e7ff" font-weight="700">1</text><text x="340" y="293" fill="#d7e7ff" font-weight="700">2</text><text x="420" y="293" fill="#d7e7ff" font-weight="700">3</text><text x="500" y="293" fill="#d7e7ff" font-weight="700">4</text><text x="580" y="293" fill="#d7e7ff" font-weight="700">5</text><text x="660" y="293" fill="#d7e7ff" font-weight="700">6</text><text x="740" y="293" fill="#d7e7ff" font-weight="700">7</text><text x="820" y="293" fill="#d7e7ff" font-weight="700">8</text><text x="900" y="293" fill="#d7e7ff" font-weight="700">9</text><text x="980" y="293" fill="#d7e7ff" font-weight="700">10</text>
+
+    <rect x="80" y="350" width="1040" height="96" rx="18" fill="#112334"/>
+    <text x="120" y="410" fill="#d7e7ff" font-weight="700">Return</text>
+    <text x="245" y="410" fill="#eef6ff">4.5%</text><text x="325" y="410" fill="#eef6ff">6.0%</text><text x="405" y="410" fill="#eef6ff">1.5%</text><text x="485" y="410" fill="#eef6ff">-2.0%</text><text x="565" y="410" fill="#eef6ff">0.0%</text><text x="645" y="410" fill="#eef6ff">4.5%</text><text x="725" y="410" fill="#eef6ff">3.5%</text><text x="805" y="410" fill="#eef6ff">2.5%</text><text x="885" y="410" fill="#eef6ff">5.5%</text><text x="965" y="410" fill="#eef6ff">4.0%</text>
+  </g>
+
+  <rect x="120" y="520" width="960" height="92" rx="24" fill="#183757" stroke="#8fb5e6"/>
+  <text x="160" y="578" fill="#ffffff" font-family="Arial, sans-serif" font-size="30">Arithmetic mean = sum of returns / 10 = 30.0% / 10 = 3.00%</text>
+  <text x="120" y="670" fill="#9cb7d3" font-family="Arial, sans-serif" font-size="22">This starts the question set, so it belongs in the episode if we do not want to skip the end of the covered pages.</text>
+</svg>

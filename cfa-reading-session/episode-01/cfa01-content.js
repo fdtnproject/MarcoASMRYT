@@ -633,6 +633,10 @@ the arithmetic mean still has an important role.
 
 [Schermo: Worked examples]
 
+![Mutual fund three-year holding period return example](./visuals/reference/visual-07-mutual-fund-hpr.svg)
+
+![Hedge fund geometric mean return example](./visuals/reference/visual-08-hedge-fund-geomean.svg)
+
 The module adds two more quick examples.
 
 First,
@@ -668,6 +672,10 @@ That distinction matters.
 
 [Schermo: Arithmetic mean versus geometric mean]
 
+![Country stock index arithmetic and geometric mean table](./visuals/reference/visual-09-country-index-table.svg)
+
+![Country stock index arithmetic versus geometric mean chart](./visuals/reference/visual-10-country-index-chart.svg)
+
 The curriculum then compares arithmetic and geometric means across several country stock indexes.
 
 The details vary by country,
@@ -702,6 +710,8 @@ And it is why the geometric mean is so important for performance reporting over 
 [Schermo: Ratios, multiples, and outliers]
 
 ![Cost averaging and harmonic mean](./visuals/reference/visual-05-harmonic-mean.svg)
+
+![P E ratio arithmetic geometric and harmonic mean example](./visuals/reference/visual-11-pe-ratio-means.svg)
 
 The reading then introduces the harmonic mean.
 
@@ -765,6 +775,8 @@ the harmonic mean can describe the effective average price paid.
 [Schermo: Which measure belongs to which problem]
 
 ![Decision guide for choosing arithmetic, geometric, or harmonic style means](./visuals/reference/visual-06-mean-selection-guide.svg)
+
+![Question set ten-year return series](./visuals/reference/visual-12-question-set-returns.svg)
 
 The reading also mentions two related tools for reducing the effect of outliers.
 
