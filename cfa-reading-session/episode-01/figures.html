@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFA Reading Session 01 | Figures</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+    :root {
+      --bg: #071018;
+      --panel: rgba(244, 249, 255, 0.06);
+      --border: rgba(201, 220, 241, 0.16);
+      --text: #eef6ff;
+      --muted: rgba(238, 246, 255, 0.72);
+      --accent: #b8d6ff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Source Sans 3", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(116, 168, 230, 0.18), transparent 30%),
+        linear-gradient(180deg, #0e1721, var(--bg));
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 28px 0 80px;
+    }
+
+    header {
+      margin-bottom: 20px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--panel);
+    }
+
+    .kicker {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 8px 0 8px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.95;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    a {
+      color: var(--text);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.07);
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #071018;
+    }
+
+    figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.45;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="kicker">CFA Reading Session 01 / Visual References</div>
+      <h1>Figures</h1>
+      <p>Queste sono le figure originali usate nel teleprompter dell'episodio 01. Sono separate qui per aprirle subito, senza cercarle dentro lo script.</p>
+      <div class="actions">
+        <a class="button" href="./teleprompter.html">Teleprompter</a>
+        <a class="button" href="./cfa01-content.js">Content JS</a>
+      </div>
+    </header>
+
+    <section class="grid">
+      <figure>
+        <a href="./visuals/reference/visual-01-rate-components.svg">
+          <img src="./visuals/reference/visual-01-rate-components.svg" alt="Interest rate components and risk premia">
+        </a>
+        <figcaption>01. Interest rate components and risk premia.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="./visuals/reference/visual-02-investments-comparison.svg">
+          <img src="./visuals/reference/visual-02-investments-comparison.svg" alt="Debt security comparison table">
+        </a>
+        <figcaption>02. Debt security comparison table with inferred liquidity and default premia.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="./visuals/reference/visual-03-holding-period-return.svg">
+          <img src="./visuals/reference/visual-03-holding-period-return.svg" alt="Holding period return formula">
+        </a>
+        <figcaption>03. Holding period return formula and component breakdown.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="./visuals/reference/visual-04-compounding-comparison.svg">
+          <img src="./visuals/reference/visual-04-compounding-comparison.svg" alt="Arithmetic versus geometric mean compounding comparison">
+        </a>
+        <figcaption>04. Arithmetic versus geometric mean compounding comparison.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="./visuals/reference/visual-05-harmonic-mean.svg">
+          <img src="./visuals/reference/visual-05-harmonic-mean.svg" alt="Cost averaging and harmonic mean">
+        </a>
+        <figcaption>05. Cost averaging and harmonic mean.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="./visuals/reference/visual-06-mean-selection-guide.svg">
+          <img src="./visuals/reference/visual-06-mean-selection-guide.svg" alt="Decision guide for choosing the right mean">
+        </a>
+        <figcaption>06. Decision guide for choosing arithmetic, geometric, or harmonic-style means.</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
