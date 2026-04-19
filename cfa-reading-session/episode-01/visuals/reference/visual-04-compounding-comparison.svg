@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Arithmetic vs Geometric Mean Comparison</title>
+  <desc id="desc">Original visual showing how arithmetic and geometric averages diverge when returns compound.</desc>
+  <rect width="1200" height="760" fill="#071018"/>
+  <text x="80" y="92" fill="#b8d6ff" font-family="Arial, sans-serif" font-size="24" letter-spacing="3">COMPOUNDING</text>
+  <text x="80" y="148" fill="#eef6ff" font-family="Georgia, serif" font-size="48">Same Returns, Different Story</text>
+  <text x="80" y="190" fill="#b9cadb" font-family="Arial, sans-serif" font-size="24">Example sequence: -50%, +35%, +27%</text>
+
+  <rect x="80" y="232" width="320" height="90" rx="22" fill="#102131" stroke="#547eab"/>
+  <text x="110" y="287" fill="#ffffff" font-family="Arial, sans-serif" font-size="30">Arithmetic mean = +4.0%</text>
+  <rect x="430" y="232" width="320" height="90" rx="22" fill="#102131" stroke="#547eab"/>
+  <text x="460" y="287" fill="#ffffff" font-family="Arial, sans-serif" font-size="30">Geometric mean = -5.0%</text>
+
+  <g font-family="Arial, sans-serif">
+    <text x="100" y="382" fill="#d7e7ff" font-size="24" font-weight="700">Year</text>
+    <text x="240" y="382" fill="#d7e7ff" font-size="24" font-weight="700">Actual Value</text>
+    <text x="490" y="382" fill="#d7e7ff" font-size="24" font-weight="700">Using 4% Arithmetic</text>
+    <text x="800" y="382" fill="#d7e7ff" font-size="24" font-weight="700">Using -5% Geometric</text>
+
+    <g fill="#eef6ff" font-size="24">
+      <text x="120" y="438">Year 0</text><text x="255" y="438">1.0000</text><text x="555" y="438">1.0000</text><text x="875" y="438">1.0000</text>
+      <text x="120" y="488">Year 1</text><text x="255" y="488">0.5000</text><text x="555" y="488">1.0400</text><text x="875" y="488">0.9500</text>
+      <text x="120" y="538">Year 2</text><text x="255" y="538">0.6750</text><text x="555" y="538">1.0816</text><text x="875" y="538">0.9025</text>
+      <text x="120" y="588">Year 3</text><text x="255" y="588">0.8573</text><text x="555" y="588">1.1249</text><text x="875" y="588">0.8574</text>
+    </g>
+
+    <line x1="90" y1="396" x2="1110" y2="396" stroke="#36597e"/>
+    <line x1="90" y1="448" x2="1110" y2="448" stroke="#21384e"/>
+    <line x1="90" y1="498" x2="1110" y2="498" stroke="#21384e"/>
+    <line x1="90" y1="548" x2="1110" y2="548" stroke="#21384e"/>
+    <line x1="90" y1="598" x2="1110" y2="598" stroke="#21384e"/>
+  </g>
+
+  <text x="80" y="676" fill="#9cb7d3" font-family="Arial, sans-serif" font-size="22">Why it matters: arithmetic mean summarizes one-period averages; geometric mean summarizes actual compounded growth.</text>
+</svg>

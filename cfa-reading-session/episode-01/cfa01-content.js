@@ -169,6 +169,8 @@ In this first episode we stay with the opening block.
 
 [Schermo: Time Value of Money]
 
+![Interest rate components and risk premia](./visuals/reference/visual-01-rate-components.svg)
+
 The reading begins with a direct point.
 
 Interest rates are critical in finance.
@@ -333,7 +335,7 @@ which means the stated percentage is not necessarily the simple gain over that e
 
 [Schermo: Comparing debt securities]
 
-![Exhibit 1 - Determining interest rates table](./visuals/png/page-019.pdf.png)
+![Debt security comparison table with inferred liquidity and default premia](./visuals/reference/visual-02-investments-comparison.svg)
 
 The first worked example in the reading compares five debt securities.
 
@@ -431,6 +433,8 @@ They start looking like structured compensation.
 ## Return Basics
 
 [Schermo: Income return plus capital gain or loss]
+
+![Holding period return formula and component breakdown](./visuals/reference/visual-03-holding-period-return.svg)
 
 After interest rates,
 the reading turns to return measurement.
@@ -559,7 +563,7 @@ That is the crucial limitation.
 
 [Schermo: Compounded growth]
 
-![Exhibit 2 - Portfolio value and performance table](./visuals/png/page-022.pdf.png)
+![Arithmetic versus geometric mean compounding comparison](./visuals/reference/visual-04-compounding-comparison.svg)
 
 To capture compounded growth,
 the curriculum uses the geometric mean return.
@@ -629,8 +633,6 @@ the arithmetic mean still has an important role.
 
 [Schermo: Worked examples]
 
-![Exhibit 5 - Country stock index returns table](./visuals/png/page-024.pdf.png)
-
 The module adds two more quick examples.
 
 First,
@@ -666,8 +668,6 @@ That distinction matters.
 
 [Schermo: Arithmetic mean versus geometric mean]
 
-![Exhibit 6 - Arithmetic and geometric mean return chart](./visuals/png/page-026.pdf.png)
-
 The curriculum then compares arithmetic and geometric means across several country stock indexes.
 
 The details vary by country,
@@ -701,9 +701,7 @@ And it is why the geometric mean is so important for performance reporting over 
 
 [Schermo: Ratios, multiples, and outliers]
 
-![Example 6 - Cost averaging and harmonic mean](./visuals/png/page-027.pdf.png)
-
-![Example 7 - Arithmetic, geometric, and harmonic means for P E ratios](./visuals/png/page-029.pdf.png)
+![Cost averaging and harmonic mean](./visuals/reference/visual-05-harmonic-mean.svg)
 
 The reading then introduces the harmonic mean.
 
@@ -766,7 +764,7 @@ the harmonic mean can describe the effective average price paid.
 
 [Schermo: Which measure belongs to which problem]
 
-![Exhibit 8 - Decision guide for choosing the right mean](./visuals/png/page-030.pdf.png)
+![Decision guide for choosing arithmetic, geometric, or harmonic style means](./visuals/reference/visual-06-mean-selection-guide.svg)
 
 The reading also mentions two related tools for reducing the effect of outliers.
 
