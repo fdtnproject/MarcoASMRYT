@@ -169,8 +169,6 @@ In this first episode we stay with the opening block.
 
 [Schermo: Time Value of Money]
 
-![Interest rate components and risk premia](./visuals/reference/visual-01-rate-components.svg)
-
 The reading begins with a direct point.
 
 Interest rates are critical in finance.
@@ -335,7 +333,7 @@ which means the stated percentage is not necessarily the simple gain over that e
 
 [Schermo: Comparing debt securities]
 
-![Debt security comparison table with inferred liquidity and default premia](./visuals/reference/visual-02-investments-comparison.svg)
+![Original PDF page 19 - Example 1 and Exhibit 1, determining interest rates](./visuals/pdf-original/page-019-original.png)
 
 The first worked example in the reading compares five debt securities.
 
@@ -433,8 +431,6 @@ They start looking like structured compensation.
 ## Return Basics
 
 [Schermo: Income return plus capital gain or loss]
-
-![Holding period return formula and component breakdown](./visuals/reference/visual-03-holding-period-return.svg)
 
 After interest rates,
 the reading turns to return measurement.
@@ -563,7 +559,7 @@ That is the crucial limitation.
 
 [Schermo: Compounded growth]
 
-![Arithmetic versus geometric mean compounding comparison](./visuals/reference/visual-04-compounding-comparison.svg)
+![Original PDF page 22 - Exhibit 2, portfolio value and performance](./visuals/pdf-original/page-022-original.png)
 
 To capture compounded growth,
 the curriculum uses the geometric mean return.
@@ -633,9 +629,9 @@ the arithmetic mean still has an important role.
 
 [Schermo: Worked examples]
 
-![Mutual fund three-year holding period return example](./visuals/reference/visual-07-mutual-fund-hpr.svg)
+![Original PDF page 23 - Example 2, Example 3, and Exhibit 3](./visuals/pdf-original/page-023-original.png)
 
-![Hedge fund geometric mean return example](./visuals/reference/visual-08-hedge-fund-geomean.svg)
+![Original PDF page 24 - Example 4, Exhibit 4, and beginning of Exhibit 5](./visuals/pdf-original/page-024-original.png)
 
 The module adds two more quick examples.
 
@@ -672,9 +668,9 @@ That distinction matters.
 
 [Schermo: Arithmetic mean versus geometric mean]
 
-![Country stock index arithmetic and geometric mean table](./visuals/reference/visual-09-country-index-table.svg)
+![Original PDF page 25 - continuation of Exhibit 5 and mean calculations](./visuals/pdf-original/page-025-original.png)
 
-![Country stock index arithmetic versus geometric mean chart](./visuals/reference/visual-10-country-index-chart.svg)
+![Original PDF page 26 - Exhibit 6, arithmetic and geometric mean chart](./visuals/pdf-original/page-026-original.png)
 
 The curriculum then compares arithmetic and geometric means across several country stock indexes.
 
@@ -709,9 +705,11 @@ And it is why the geometric mean is so important for performance reporting over 
 
 [Schermo: Ratios, multiples, and outliers]
 
-![Cost averaging and harmonic mean](./visuals/reference/visual-05-harmonic-mean.svg)
+![Original PDF page 27 - Example 6, cost averaging and harmonic mean](./visuals/pdf-original/page-027-original.png)
 
-![P E ratio arithmetic geometric and harmonic mean example](./visuals/reference/visual-11-pe-ratio-means.svg)
+![Original PDF page 28 - Example 7 and Exhibit 7, P E ratios](./visuals/pdf-original/page-028-original.png)
+
+![Original PDF page 29 - Example 7 calculations and Exhibit 8 setup](./visuals/pdf-original/page-029-original.png)
 
 The reading then introduces the harmonic mean.
 
@@ -774,9 +772,7 @@ the harmonic mean can describe the effective average price paid.
 
 [Schermo: Which measure belongs to which problem]
 
-![Decision guide for choosing arithmetic, geometric, or harmonic style means](./visuals/reference/visual-06-mean-selection-guide.svg)
-
-![Question set ten-year return series](./visuals/reference/visual-12-question-set-returns.svg)
+![Original PDF page 30 - Exhibit 8 and Exhibit 9 question set](./visuals/pdf-original/page-030-original.png)
 
 The reading also mentions two related tools for reducing the effect of outliers.
 
