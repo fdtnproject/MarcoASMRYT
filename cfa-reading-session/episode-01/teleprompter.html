@@ -169,10 +169,20 @@
       color: var(--accent);
     }
 
-    .page {
-      width: min(var(--measure), calc(100% - 28px));
+    .stage {
+      width: min(1320px, calc(100% - 28px));
       margin: 0 auto;
       padding: 28px 0 120px;
+      display: grid;
+      grid-template-columns: minmax(0, var(--measure)) 340px;
+      gap: 18px;
+      align-items: start;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      min-width: 0;
     }
 
     .hero {
@@ -215,27 +225,57 @@
       background: rgba(255, 255, 255, 0.03);
     }
 
-    .tele-grid {
+    .figure-dock {
+      position: sticky;
+      top: 92px;
+      z-index: 30;
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 18px;
+      gap: 12px;
+      align-content: start;
+      max-height: calc(100vh - 112px);
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid var(--panel-border);
+      border-radius: 24px;
+      background: rgba(8, 13, 18, 0.80);
+      backdrop-filter: blur(12px);
+    }
+
+    .figure-dock-header {
+      padding: 4px 4px 8px;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .figure-dock-header strong {
+      display: block;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .figure-dock-header span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .figure-dock-list {
+      display: grid;
+      gap: 12px;
     }
 
     .tele-copy {
       min-width: 0;
     }
 
-    .tele-visual-rail {
-      display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-
     .visual-card {
       display: block;
       text-decoration: none;
       color: var(--text);
-      padding: 12px;
+      padding: 10px;
       border-radius: 18px;
       border: 1px solid var(--panel-border);
       background: rgba(255, 255, 255, 0.04);
@@ -325,10 +365,6 @@
 
     .tele-p:last-child {
       margin-bottom: 0;
-    }
-
-    body.hide-visuals .tele-visual-rail {
-      display: none;
     }
 
     .lightbox {
@@ -428,13 +464,30 @@
         flex-wrap: wrap;
       }
 
-      .tele-visual-rail {
-        order: -1;
-      }
-
-      .page {
+      .stage {
+        display: flex;
+        flex-direction: column;
         width: min(calc(100% - 18px), var(--measure));
         padding-bottom: 150px;
+      }
+
+      .figure-dock {
+        order: -1;
+        position: sticky;
+        top: 0;
+        z-index: 45;
+        max-height: 34vh;
+        margin-bottom: 14px;
+        overflow: auto;
+      }
+
+      .figure-dock-list {
+        display: flex;
+        gap: 12px;
+      }
+
+      .figure-dock .visual-card {
+        min-width: 260px;
       }
 
       :root {
@@ -442,15 +495,9 @@
       }
     }
 
-    @media (min-width: 1180px) {
-      .tele-grid.has-visuals {
-        grid-template-columns: minmax(0, 1fr) 320px;
-        align-items: start;
-      }
-
-      .tele-visual-rail {
-        position: sticky;
-        top: 92px;
+    @media (max-width: 1180px) and (min-width: 861px) {
+      .stage {
+        grid-template-columns: minmax(0, 1fr) 300px;
       }
     }
   </style>
@@ -494,29 +541,35 @@
         <button class="secondary" id="theme-toggle">Low Light</button>
       </div>
 
-      <div class="control-group">
-        <button class="secondary" id="visuals-toggle">Visuals On</button>
-      </div>
     </div>
 
     <div class="status">
       <div>Scorrimento <strong id="speed-value">2</strong>/5</div>
-      <div>Scegli `0-5`, poi `Play`. `[` piu lento, `]` piu veloce, `V` visuals, `R` reset</div>
+      <div>Scegli `0-5`, poi `Play`. `[` piu lento, `]` piu veloce, `R` reset. Figure sempre nel teleprompter.</div>
     </div>
   </div>
 
-  <main class="page">
-    <section class="hero">
-      <strong id="hero-kicker"></strong>
-      <h1 id="hero-title"></h1>
-      <p id="hero-description"></p>
-    </section>
+  <main class="stage">
+    <div class="page">
+      <section class="hero">
+        <strong id="hero-kicker"></strong>
+        <h1 id="hero-title"></h1>
+        <p id="hero-description"></p>
+      </section>
 
-    <div id="teleprompter-content"></div>
+      <div id="teleprompter-content"></div>
+    </div>
+
+    <aside class="figure-dock" aria-label="Figure sempre visibili">
+      <div class="figure-dock-header">
+        <strong>Figures</strong>
+        <span>Sempre dentro il teleprompter. Clicca una figura per ingrandirla.</span>
+      </div>
+      <div class="figure-dock-list" id="figure-dock-list"></div>
+    </aside>
   </main>
 
   <div class="floating-links">
-    <a href="./figures.html">Figures</a>
     <a href="../../asmr-scripts/cfa-reading-session-01-rates-and-returns-i.md">Markdown</a>
   </div>
 
@@ -543,6 +596,45 @@
     document.getElementById("hero-description").textContent = content.description;
 
     const root = document.getElementById("teleprompter-content");
+    const figureDockList = document.getElementById("figure-dock-list");
+
+    const figures = doc.sections.flatMap((section) =>
+      section.items
+        .filter((item) => item.type === "image")
+        .map((item) => ({
+          ...item,
+          sectionTitle: section.title
+        }))
+    );
+
+    function createVisualCard(item, index) {
+      const card = document.createElement("a");
+      card.className = "visual-card";
+      card.href = item.src;
+      card.dataset.lightbox = "true";
+      card.dataset.src = item.src;
+      card.dataset.caption = item.alt;
+
+      const tag = document.createElement("strong");
+      tag.textContent = `Figure ${String(index + 1).padStart(2, "0")}`;
+      card.appendChild(tag);
+
+      const img = document.createElement("img");
+      img.src = item.src;
+      img.alt = item.alt;
+      img.loading = "lazy";
+      card.appendChild(img);
+
+      const caption = document.createElement("span");
+      caption.textContent = `${item.sectionTitle}: ${item.alt}`;
+      card.appendChild(caption);
+
+      return card;
+    }
+
+    figures.forEach((figure, index) => {
+      figureDockList.appendChild(createVisualCard(figure, index));
+    });
 
     doc.sections.forEach((section) => {
       const sectionEl = document.createElement("section");
@@ -552,20 +644,8 @@
       heading.textContent = section.title;
       sectionEl.appendChild(heading);
 
-      const items = document.createElement("div");
-      const hasVisuals = section.items.some((item) => item.type === "image");
-      items.className = hasVisuals ? "tele-grid has-visuals" : "tele-grid";
-
       const copy = document.createElement("div");
       copy.className = "tele-copy";
-      items.appendChild(copy);
-
-      let visualRail = null;
-      if (hasVisuals) {
-        visualRail = document.createElement("aside");
-        visualRail.className = "tele-visual-rail";
-        items.appendChild(visualRail);
-      }
 
       section.items.forEach((item) => {
         if (item.type === "cue") {
@@ -596,29 +676,7 @@
           return;
         }
 
-        if (item.type === "image" && visualRail) {
-          const card = document.createElement("a");
-          card.className = "visual-card";
-          card.href = item.src;
-          card.dataset.lightbox = "true";
-          card.dataset.src = item.src;
-          card.dataset.caption = item.alt;
-
-          const tag = document.createElement("strong");
-          tag.textContent = "Visual Reference";
-          card.appendChild(tag);
-
-          const img = document.createElement("img");
-          img.src = item.src;
-          img.alt = item.alt;
-          img.loading = "lazy";
-          card.appendChild(img);
-
-          const caption = document.createElement("span");
-          caption.textContent = item.alt;
-          card.appendChild(caption);
-
-          visualRail.appendChild(card);
+        if (item.type === "image") {
           return;
         }
 
@@ -633,7 +691,7 @@
         }
       });
 
-      sectionEl.appendChild(items);
+      sectionEl.appendChild(copy);
       root.appendChild(sectionEl);
     });
 
@@ -643,7 +701,6 @@
     const sizeInput = document.getElementById("size");
     const measureInput = document.getElementById("measure");
     const themeToggle = document.getElementById("theme-toggle");
-    const visualsToggle = document.getElementById("visuals-toggle");
     const speedValue = document.getElementById("speed-value");
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
@@ -660,8 +717,7 @@
       speed: Number(speedInput.value),
       fontSize: Number(sizeInput.value),
       measure: Number(measureInput.value),
-      lowLight: false,
-      showVisuals: true
+      lowLight: false
     };
 
     function clampSpeed(value) {
@@ -707,10 +763,8 @@
       document.documentElement.style.setProperty("--measure", `${settings.measure}px`);
       speedValue.textContent = String(settings.speed);
       document.body.classList.toggle("low-light", settings.lowLight);
-      document.body.classList.toggle("hide-visuals", !settings.showVisuals);
       playToggle.textContent = settings.playing ? "Pause" : "Play";
       themeToggle.textContent = settings.lowLight ? "Normal Light" : "Low Light";
-      visualsToggle.textContent = settings.showVisuals ? "Visuals On" : "Visuals Off";
     }
 
     function step(timestamp) {
@@ -787,12 +841,7 @@
       applySettings();
     });
 
-    visualsToggle.addEventListener("click", () => {
-      settings.showVisuals = !settings.showVisuals;
-      applySettings();
-    });
-
-    root.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
       const trigger = event.target.closest("[data-lightbox='true']");
       if (!trigger) return;
       event.preventDefault();
@@ -840,9 +889,6 @@
         applySettings();
       } else if (event.key === "0") {
         setSpeed(0);
-      } else if (event.key.toLowerCase() === "v") {
-        settings.showVisuals = !settings.showVisuals;
-        applySettings();
       } else if (event.key.toLowerCase() === "r") {
         settings.playing = false;
         settings.lastFrame = 0;
@@ -851,7 +897,6 @@
         settings.fontSize = 40;
         settings.measure = 860;
         settings.lowLight = false;
-        settings.showVisuals = true;
         speedInput.value = String(DEFAULT_SPEED);
         sizeInput.value = "40";
         measureInput.value = "860";
