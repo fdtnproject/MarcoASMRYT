@@ -215,6 +215,58 @@
       background: rgba(255, 255, 255, 0.03);
     }
 
+    .tele-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .tele-copy {
+      min-width: 0;
+    }
+
+    .tele-visual-rail {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .visual-card {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid var(--panel-border);
+      background: rgba(255, 255, 255, 0.04);
+      cursor: zoom-in;
+    }
+
+    .visual-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .visual-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .visual-card span {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--muted);
+    }
+
     .tele-section h2 {
       margin: 0 0 14px;
       font-family: "Cormorant Garamond", serif;
@@ -275,6 +327,67 @@
       margin-bottom: 0;
     }
 
+    body.hide-visuals .tele-visual-rail {
+      display: none;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(2, 7, 11, 0.84);
+      backdrop-filter: blur(10px);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      position: relative;
+      width: min(1200px, 100%);
+      max-height: 100%;
+      padding: 18px 18px 14px;
+      border-radius: 24px;
+      border: 1px solid var(--panel-border);
+      background: rgba(8, 13, 18, 0.94);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      min-height: 38px;
+      min-width: 38px;
+      padding: 0 12px;
+    }
+
+    .lightbox-figure {
+      margin: 0;
+      overflow: auto;
+      max-height: calc(100vh - 120px);
+      padding-top: 18px;
+    }
+
+    .lightbox-figure img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 16px;
+    }
+
+    .lightbox-figure figcaption {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
     .floating-links {
       position: fixed;
       right: 18px;
@@ -324,6 +437,18 @@
         --font-size: 34px;
       }
     }
+
+    @media (min-width: 1180px) {
+      .tele-grid.has-visuals {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        align-items: start;
+      }
+
+      .tele-visual-rail {
+        position: sticky;
+        top: 92px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -364,11 +489,15 @@
       <div class="control-group">
         <button class="secondary" id="theme-toggle">Low Light</button>
       </div>
+
+      <div class="control-group">
+        <button class="secondary" id="visuals-toggle">Visuals On</button>
+      </div>
     </div>
 
     <div class="status">
       <div>Scorrimento <strong id="speed-value">2</strong>/5</div>
-      <div>Scegli `0-5`, poi `Play`. `[` più lento, `]` più veloce, `R` reset</div>
+      <div>Scegli `0-5`, poi `Play`. `[` più lento, `]` più veloce, `V` visuals, `R` reset</div>
     </div>
   </div>
 
@@ -384,6 +513,16 @@
 
   <div class="floating-links">
     <a href="../../asmr-scripts/cfa-reading-session-01-rates-and-returns-i.md">Markdown</a>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="secondary lightbox-close" id="lightbox-close">Close</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
   </div>
 
   <script src="./cfa01-content.js"></script>
@@ -408,12 +547,27 @@
       heading.textContent = section.title;
       sectionEl.appendChild(heading);
 
+      const items = document.createElement("div");
+      const hasVisuals = section.items.some((item) => item.type === "image");
+      items.className = hasVisuals ? "tele-grid has-visuals" : "tele-grid";
+
+      const copy = document.createElement("div");
+      copy.className = "tele-copy";
+      items.appendChild(copy);
+
+      let visualRail = null;
+      if (hasVisuals) {
+        visualRail = document.createElement("aside");
+        visualRail.className = "tele-visual-rail";
+        items.appendChild(visualRail);
+      }
+
       section.items.forEach((item) => {
         if (item.type === "cue") {
           const cue = document.createElement("div");
           cue.className = "cue";
           cue.textContent = item.text;
-          sectionEl.appendChild(cue);
+          copy.appendChild(cue);
           return;
         }
 
@@ -423,7 +577,7 @@
           quote.innerHTML = item.lines
             .map((line) => `<span>${utils.escapeHtml(line)}</span>`)
             .join("");
-          sectionEl.appendChild(quote);
+          copy.appendChild(quote);
           return;
         }
 
@@ -432,8 +586,34 @@
             const p = document.createElement("p");
             p.className = "tele-p";
             p.innerHTML = `<span>${utils.escapeHtml(entry)}</span>`;
-            sectionEl.appendChild(p);
+            copy.appendChild(p);
           });
+          return;
+        }
+
+        if (item.type === "image" && visualRail) {
+          const card = document.createElement("a");
+          card.className = "visual-card";
+          card.href = item.src;
+          card.dataset.lightbox = "true";
+          card.dataset.src = item.src;
+          card.dataset.caption = item.alt;
+
+          const tag = document.createElement("strong");
+          tag.textContent = "Visual Reference";
+          card.appendChild(tag);
+
+          const img = document.createElement("img");
+          img.src = item.src;
+          img.alt = item.alt;
+          img.loading = "lazy";
+          card.appendChild(img);
+
+          const caption = document.createElement("span");
+          caption.textContent = item.alt;
+          card.appendChild(caption);
+
+          visualRail.appendChild(card);
           return;
         }
 
@@ -444,10 +624,11 @@
             p.classList.add("pause");
           }
           p.innerHTML = utils.renderMultilineText(item.text);
-          sectionEl.appendChild(p);
+          copy.appendChild(p);
         }
       });
 
+      sectionEl.appendChild(items);
       root.appendChild(sectionEl);
     });
 
@@ -457,7 +638,12 @@
     const sizeInput = document.getElementById("size");
     const measureInput = document.getElementById("measure");
     const themeToggle = document.getElementById("theme-toggle");
+    const visualsToggle = document.getElementById("visuals-toggle");
     const speedValue = document.getElementById("speed-value");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const lightboxClose = document.getElementById("lightbox-close");
 
     const DEFAULT_SPEED = 2;
     const PACE_PER_POINT = 14;
@@ -469,7 +655,8 @@
       speed: Number(speedInput.value),
       fontSize: Number(sizeInput.value),
       measure: Number(measureInput.value),
-      lowLight: false
+      lowLight: false,
+      showVisuals: true
     };
 
     function clampSpeed(value) {
@@ -515,8 +702,10 @@
       document.documentElement.style.setProperty("--measure", `${settings.measure}px`);
       speedValue.textContent = String(settings.speed);
       document.body.classList.toggle("low-light", settings.lowLight);
+      document.body.classList.toggle("hide-visuals", !settings.showVisuals);
       playToggle.textContent = settings.playing ? "Pause" : "Play";
       themeToggle.textContent = settings.lowLight ? "Normal Light" : "Low Light";
+      visualsToggle.textContent = settings.showVisuals ? "Visuals On" : "Visuals Off";
     }
 
     function step(timestamp) {
@@ -593,6 +782,37 @@
       applySettings();
     });
 
+    visualsToggle.addEventListener("click", () => {
+      settings.showVisuals = !settings.showVisuals;
+      applySettings();
+    });
+
+    root.addEventListener("click", (event) => {
+      const trigger = event.target.closest("[data-lightbox='true']");
+      if (!trigger) return;
+      event.preventDefault();
+      lightboxImage.src = trigger.dataset.src;
+      lightboxImage.alt = trigger.dataset.caption || "";
+      lightboxCaption.textContent = trigger.dataset.caption || "";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.src = "";
+      lightboxImage.alt = "";
+      lightboxCaption.textContent = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
     window.addEventListener("keydown", (event) => {
       if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
         return;
@@ -615,6 +835,9 @@
         applySettings();
       } else if (event.key === "0") {
         setSpeed(0);
+      } else if (event.key.toLowerCase() === "v") {
+        settings.showVisuals = !settings.showVisuals;
+        applySettings();
       } else if (event.key.toLowerCase() === "r") {
         settings.playing = false;
         settings.lastFrame = 0;
@@ -623,11 +846,14 @@
         settings.fontSize = 40;
         settings.measure = 860;
         settings.lowLight = false;
+        settings.showVisuals = true;
         speedInput.value = String(DEFAULT_SPEED);
         sizeInput.value = "40";
         measureInput.value = "860";
         applySettings();
         window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
       }
     });
 

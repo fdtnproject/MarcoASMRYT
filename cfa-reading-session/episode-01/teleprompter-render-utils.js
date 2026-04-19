@@ -114,6 +114,19 @@
         continue;
       }
 
+      if (/^!\[.*\]\(.*\)$/.test(trimmed)) {
+        flushParagraph(paragraphBuffer, currentSection.items);
+        flushQuote(quoteBuffer, currentSection.items);
+        flushList(listBuffer, currentSection.items);
+        const match = trimmed.match(/^!\[(.*)\]\((.*)\)$/);
+        currentSection.items.push({
+          type: "image",
+          alt: match[1].trim(),
+          src: match[2].trim()
+        });
+        continue;
+      }
+
       if (trimmed.startsWith("> ")) {
         flushParagraph(paragraphBuffer, currentSection.items);
         flushList(listBuffer, currentSection.items);
