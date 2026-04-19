@@ -170,14 +170,9 @@
     }
 
     .stage {
-      width: min(1320px, calc(100% - 28px));
+      width: min(var(--measure), calc(100% - 28px));
       margin: 0 auto;
       padding: 28px 0 120px;
-      display: grid;
-      grid-template-columns: minmax(0, var(--measure)) 340px;
-      gap: 18px;
-      align-items: start;
-      justify-content: center;
     }
 
     .page {
@@ -225,48 +220,6 @@
       background: rgba(255, 255, 255, 0.03);
     }
 
-    .figure-dock {
-      position: sticky;
-      top: 92px;
-      z-index: 30;
-      display: grid;
-      gap: 12px;
-      align-content: start;
-      max-height: calc(100vh - 112px);
-      overflow: auto;
-      padding: 14px;
-      border: 1px solid var(--panel-border);
-      border-radius: 24px;
-      background: rgba(8, 13, 18, 0.80);
-      backdrop-filter: blur(12px);
-    }
-
-    .figure-dock-header {
-      padding: 4px 4px 8px;
-      border-bottom: 1px solid var(--panel-border);
-    }
-
-    .figure-dock-header strong {
-      display: block;
-      color: var(--accent);
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .figure-dock-header span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.35;
-    }
-
-    .figure-dock-list {
-      display: grid;
-      gap: 12px;
-    }
-
     .tele-copy {
       min-width: 0;
     }
@@ -275,8 +228,9 @@
       display: block;
       text-decoration: none;
       color: var(--text);
-      padding: 10px;
-      border-radius: 18px;
+      margin: 18px 0 24px;
+      padding: 14px;
+      border-radius: 22px;
       border: 1px solid var(--panel-border);
       background: rgba(255, 255, 255, 0.04);
       cursor: zoom-in;
@@ -295,14 +249,14 @@
       display: block;
       width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .visual-card span {
       display: block;
       margin-top: 10px;
-      font-size: 14px;
+      font-size: calc(var(--font-size) * 0.42);
       line-height: 1.45;
       color: var(--muted);
     }
@@ -465,39 +419,12 @@
       }
 
       .stage {
-        display: flex;
-        flex-direction: column;
         width: min(calc(100% - 18px), var(--measure));
         padding-bottom: 150px;
       }
 
-      .figure-dock {
-        order: -1;
-        position: sticky;
-        top: 0;
-        z-index: 45;
-        max-height: 34vh;
-        margin-bottom: 14px;
-        overflow: auto;
-      }
-
-      .figure-dock-list {
-        display: flex;
-        gap: 12px;
-      }
-
-      .figure-dock .visual-card {
-        min-width: 260px;
-      }
-
       :root {
         --font-size: 34px;
-      }
-    }
-
-    @media (max-width: 1180px) and (min-width: 861px) {
-      .stage {
-        grid-template-columns: minmax(0, 1fr) 300px;
       }
     }
   </style>
@@ -545,7 +472,7 @@
 
     <div class="status">
       <div>Scorrimento <strong id="speed-value">2</strong>/5</div>
-      <div>Scegli `0-5`, poi `Play`. `[` piu lento, `]` piu veloce, `R` reset. Figure sempre nel teleprompter.</div>
+      <div>Scegli `0-5`, poi `Play`. `[` piu lento, `]` piu veloce, `R` reset. Le figure scorrono nel testo.</div>
     </div>
   </div>
 
@@ -559,14 +486,6 @@
 
       <div id="teleprompter-content"></div>
     </div>
-
-    <aside class="figure-dock" aria-label="Figure sempre visibili">
-      <div class="figure-dock-header">
-        <strong>Figures</strong>
-        <span>Sempre dentro il teleprompter. Clicca una figura per ingrandirla.</span>
-      </div>
-      <div class="figure-dock-list" id="figure-dock-list"></div>
-    </aside>
   </main>
 
   <div class="floating-links">
@@ -596,16 +515,6 @@
     document.getElementById("hero-description").textContent = content.description;
 
     const root = document.getElementById("teleprompter-content");
-    const figureDockList = document.getElementById("figure-dock-list");
-
-    const figures = doc.sections.flatMap((section) =>
-      section.items
-        .filter((item) => item.type === "image")
-        .map((item) => ({
-          ...item,
-          sectionTitle: section.title
-        }))
-    );
 
     function createVisualCard(item, index) {
       const card = document.createElement("a");
@@ -626,16 +535,13 @@
       card.appendChild(img);
 
       const caption = document.createElement("span");
-      caption.textContent = `${item.sectionTitle}: ${item.alt}`;
+      caption.textContent = item.alt;
       card.appendChild(caption);
 
       return card;
     }
 
-    figures.forEach((figure, index) => {
-      figureDockList.appendChild(createVisualCard(figure, index));
-    });
-
+    let visualIndex = 0;
     doc.sections.forEach((section) => {
       const sectionEl = document.createElement("section");
       sectionEl.className = "tele-section";
@@ -677,6 +583,8 @@
         }
 
         if (item.type === "image") {
+          copy.appendChild(createVisualCard(item, visualIndex));
+          visualIndex += 1;
           return;
         }
 
