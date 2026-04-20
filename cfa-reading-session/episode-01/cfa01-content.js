@@ -419,6 +419,25 @@ That suggests a reasonable range for investment three somewhere between two poin
 
 Pausa lunga.
 
+One more time, slowly.
+
+Investment three should be above investment two,
+because it has the same low liquidity and low default risk,
+but a longer maturity.
+
+That gives the lower bound:
+above two point five percent.
+
+And investment three should stay below the low-liquidity version of investment four.
+
+That gives the upper guide:
+below about four point five percent.
+
+So the memory hook is simple:
+two point five to four point five percent.
+
+Pausa.
+
 This is good finance training.
 
 Hold other things constant.
@@ -487,7 +506,10 @@ An investor buys one hundred shares at thirty-four dollars and fifty cents per s
 
 Later,
 the shares are sold at thirty dollars and fifty cents,
-and the investor receives a dividend payment of fifty-one dollars and fifty-five cents.
+and the investor receives a total dividend payment of fifty-one dollars and fifty-five cents.
+
+Total dividend.
+Not fifty-one dollars and fifty-five cents per share.
 
 The resulting holding period return is negative ten point one percent.
 
@@ -575,6 +597,21 @@ negative fifty percent,
 positive thirty-five percent,
 and positive twenty-seven percent,
 the geometric mean is negative five percent.
+
+If we slow down the arithmetic,
+the compound path is:
+
+zero point five,
+times one point three five,
+times one point two seven.
+
+That product is about zero point eight five seven three.
+
+Then we take the cube root,
+because there are three annual periods,
+and subtract one.
+
+That gives approximately negative five percent per year.
 
 That is a dramatic difference from the arithmetic mean of positive four percent.
 
@@ -767,6 +804,30 @@ And that is the key intuition.
 
 When a fixed amount of money is repeatedly applied to different prices,
 the harmonic mean can describe the effective average price paid.
+
+Pausa.
+
+The reading gives one more numerical illustration using ten favorite stocks and their P E ratios.
+
+For that group,
+the arithmetic mean P E is about twelve point one five.
+
+The geometric mean is about eleven point four three.
+
+And the harmonic mean is about ten point eight one.
+
+Pausa.
+
+Keeping those to two decimals makes the comparison clean:
+twelve point one five,
+eleven point four three,
+ten point eight one.
+
+The usual ordering still holds.
+
+Harmonic mean,
+then geometric mean,
+then arithmetic mean.
 
 ## Choosing The Right Mean
 

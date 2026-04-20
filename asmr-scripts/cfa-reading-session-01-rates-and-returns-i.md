@@ -478,6 +478,30 @@ the reading suggests that a reasonable expected range is between two point five 
 
 [pause]
 
+One more time, slowly.
+
+Investment three should be above investment two,
+
+because it has the same low liquidity and low default risk,
+
+but a longer maturity.
+
+That gives the lower bound:
+
+above two point five percent.
+
+And investment three should stay below the low-liquidity version of investment four.
+
+That gives the upper guide:
+
+below about four point five percent.
+
+So the memory hook is simple:
+
+two point five to four point five percent.
+
+[pause]
+
 This kind of reasoning matters.
 
 Not because every exam question will look exactly like this,
@@ -696,6 +720,26 @@ plus twenty-seven,
 
 the geometric mean is negative five percent.
 
+If we slow down the arithmetic,
+
+the compound path is:
+
+zero point five,
+
+times one point three five,
+
+times one point two seven.
+
+That product is about zero point eight five seven three.
+
+Then we take the cube root,
+
+because there are three annual periods,
+
+and subtract one.
+
+That gives approximately negative five percent per year.
+
 That is a huge difference from the arithmetic mean of positive four percent.
 
 [pause]
@@ -750,7 +794,11 @@ An investor buys one hundred shares at thirty-four dollars and fifty cents each.
 
 Later, the shares are sold at thirty dollars and fifty cents,
 
-and a dividend payment of fifty-one dollars and fifty-five cents is received.
+and a total dividend payment of fifty-one dollars and fifty-five cents is received.
+
+Total dividend.
+
+Not fifty-one dollars and fifty-five cents per share.
 
 The holding period return is negative ten point one percent.
 
