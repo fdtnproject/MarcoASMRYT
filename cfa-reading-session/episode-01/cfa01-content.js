@@ -46,6 +46,20 @@ you can let the structure carry you.
 
 Pausa lunga.
 
+The playlist name is simple and correct:
+
+- CFA Reading Session | Level I 2024
+
+And the episode title is also clean and correct:
+
+- CFA Reading Session 01 | Rates and Returns I | Interest Rates, Risk Premia, and Return Basics
+
+That naming works because it tells the listener three things at once.
+
+It says this is part of a series.
+It says which program and year we are using.
+And it says exactly where we are in the material.
+
 ## How To Use The Curriculum
 
 [Schermo: Curriculum / CBOK / LOS]
