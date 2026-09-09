@@ -331,7 +331,7 @@ It is the whole point of the total probability rule for expected value.
 The module then quietly reminds us that risk can also be conditional.
 
 If the world narrows to one branch,
-the relevant uncertainty narrows with it.
+the relevant uncertainty changes with it.
 
 ![Original PDF page 149 - conditional variance and BankCorp operating-cost tree opening](./visuals/pdf-original/page-149-original.png)
 
@@ -349,9 +349,7 @@ stable rates do not just lower expected EPS.
 They also produce greater conditional dispersion.
 
 In other words,
-the scenario with the lower mean is also the scenario with the larger conditional risk.
-
-That pairing is common enough in finance to be worth noticing.
+in this example the scenario with the lower mean is also the scenario with the larger conditional risk.
 
 That is a quiet but important investment lesson:
 
@@ -801,7 +799,7 @@ The likelihood ratio determines how strongly the new information pushes that sta
 
 If the announcement had been equally likely under all three EPS outcomes,
 there would have been no informational edge,
-and the posterior probabilities would have stayed much closer to the priors.
+and the posterior probabilities would have stayed exactly equal to the priors.
 
 That is another useful exam instinct:
 
@@ -876,6 +874,8 @@ which is simply 0.75.
 
 So when priors are equal,
 the posterior for the event lines up with the likelihood of the information given the event.
+
+That works cleanly in this example because the three likelihoods themselves sum to one.
 
 That is a very elegant special case.
 

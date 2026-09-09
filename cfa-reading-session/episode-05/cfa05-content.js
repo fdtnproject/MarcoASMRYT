@@ -748,6 +748,22 @@ The geometric mean is about two point nine seven one seven percent.
 
 And the harmonic mean is about two point nine four four two percent.
 
+That last number is worth pausing on,
+because it is not the plain formula from episode one.
+
+The curriculum applies the harmonic mean to one plus each return,
+and then subtracts one.
+
+Ten,
+divided by the sum of one over one plus r,
+minus one.
+
+That detour is necessary,
+because the general harmonic mean formula requires every observation to be strictly positive,
+and this ten-year series contains a zero year and a negative year.
+
+Pausa.
+
 That last comparison is quiet but helpful.
 
 When returns vary,

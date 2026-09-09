@@ -109,9 +109,14 @@ The correct answer is the harmonic mean.
 
 That should immediately remind us of the logic from episode one.
 
-When we are averaging prices per unit,
+In this question the manager invests five thousand euros each year for four years,
+so the amount of money is fixed
+and the number of units bought changes with the price.
+
+When we are averaging prices per unit like this,
 or more generally averaging ratios,
-the harmonic mean can be the right tool because it gives equal weight to each observation in a way the arithmetic mean does not.
+the harmonic mean is the right tool because it gives equal weight to each data point
+and reduces the potential influence of outliers.
 
 Pausa.
 

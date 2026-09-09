@@ -339,6 +339,10 @@ The first worked example in the reading compares five debt securities.
 
 Each security promises a single payment at maturity.
 
+And the example asks us to assume that the premiums relating to inflation,
+liquidity,
+and default risk are constant across all time horizons.
+
 The point of the example is to isolate what a rate is paying you for.
 
 Pausa.

@@ -147,8 +147,17 @@ Pausa.
 
 Step two values everything that happens after year three.
 
-The dividend in year four becomes about one point eight two pounds,
-which is year-three dividend times one point zero two.
+Now, the dividend in year four deserves one careful note.
+
+The curriculum prints one point eight nine four pounds,
+but right beside it shows the calculation as one point seven eight seven times one point zero two,
+and that product is one point eight two three.
+
+The printed figure looks like a slip,
+because it is one point eight two three that produces the nine point two two we are about to see.
+
+So we take the year-three dividend times one point zero two,
+about one point eight two pounds.
 
 That opens the stable-growth perpetuity.
 

@@ -247,9 +247,12 @@ A higher hurdle pulls more observations into the downside set,
 and also increases the size of the shortfalls.
 
 At four percent, for example,
-the returns of three percent and two percent are no longer neutral.
+the two months that returned exactly three percent stop being neutral,
+and enter the downside set for the first time.
 
-They also become part of the downside story.
+The months that were already below the target,
+like the two percent month,
+were contributing before and simply see their shortfall grow.
 
 Pausa.
 
@@ -325,6 +328,15 @@ The formula is simple:
 standard deviation divided by mean.
 
 So CV measures risk per unit of average reward.
+
+With one condition attached.
+
+If the mean return is negative,
+the curriculum is explicit that the statistic is meaningless,
+and with a mean of zero the ratio is not defined at all.
+
+Keep that in mind,
+because the practice set at the end of this module shows three funds whose average returns are all negative.
 
 And because it scales the dispersion by the size of the mean,
 it lets us compare datasets that might otherwise feel difficult to compare.
@@ -439,7 +451,7 @@ Portfolio B also has an arithmetic mean of three percent,
 but a higher standard deviation of six percent.
 
 Therefore,
-Portfolio B must have a geometric mean lower than two point eight five percent.
+Portfolio B most likely has a geometric mean lower than two point eight five percent.
 
 Same arithmetic center.
 
