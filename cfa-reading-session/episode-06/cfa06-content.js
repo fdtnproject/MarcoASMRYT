@@ -344,7 +344,7 @@ the curriculum is explicit that the statistic is meaningless,
 and with a mean of zero the ratio is not defined at all.
 
 Keep that in mind,
-because the practice set at the end of this module shows three funds whose average returns are all negative.
+because the upcoming question set on dispersion shows three funds whose average returns are all negative.
 
 And because it scales the dispersion by the size of the mean,
 it lets us compare datasets that might otherwise feel difficult to compare.

@@ -1,1137 +1,904 @@
-# CFA Reading Session 01
+# CFA READING SESSION 01
 
-## Playlist
-`CFA Reading Session | Level I 2024`
+Versione teleprompter
+Linea guida: "Calm, accurate, sleep-friendly"
 
-## Episode Title
-`CFA Reading Session 01 | Rates and Returns I | Interest Rates, Risk Premia, and Return Basics`
+Nota di lavoro:
+- source base: CFA Level I 2024 Volume 1
+- coverage: front matter plus the opening of Learning Module 1
+- adapted for spoken delivery and pacing, without inventing facts beyond the source
 
-## Source Coverage
-- CFA Level I 2024 Volume 1
-- Front matter: how to use the curriculum and study approach
-- Quantitative Methods, Learning Module 1
-- Approximate PDF pages: 11-30
+## Opening
 
-## Delivery Notes
-- Tone: soft spoken, calm, sleep-friendly, but technically accurate
-- Pace: slow, with light pauses after formulas and examples
-- Goal runtime: about 45 to 55 minutes depending on delivery speed and pauses
-- Style: paraphrased and adapted for spoken delivery, not read verbatim from the book
+[Schermo: CFA Level I / Volume 1 / Quantitative Methods]
 
-## Teleprompter Script
+Welcome back to CFA Reading Session.
 
-[soft intro]
+Tonight we begin Volume One,
+with the first layer of quantitative methods,
+and with one of the most basic relationships in all of finance.
 
-Hello, and welcome back to CFA Reading Session.
+The relationship between money now,
+money later,
+and the rate that connects the two.
 
-This is a calm, slow study session based on the CFA Level One twenty twenty-four curriculum.
+Pausa.
 
-Tonight we are starting Volume One, with the opening ideas behind rates and returns.
+This is a slow session.
+The goal is not speed.
+The goal is clarity,
+rhythm,
+and fidelity to the curriculum.
 
-We will move slowly.
+If you are studying,
+you can follow concept by concept.
 
-We will keep the language clear.
+If you are winding down,
+you can let the structure carry you.
 
-And we will stay close to the actual curriculum, so the content remains reliable.
+Pausa lunga.
 
-[short pause]
+## How To Use The Curriculum
 
-If you are studying, you can follow along.
+[Schermo: Curriculum / CBOK / LOS]
 
-If you are winding down, you can simply let the ideas pass by in a gentle rhythm.
+Before the quantitative reading starts,
+the curriculum explains how the program is meant to be used.
 
-[page turn]
+The CFA Program exams are designed to test mastery of the core knowledge,
+skills,
+and abilities needed to work as an investment professional.
 
-Before the first quantitative reading begins, the curriculum explains how the program is meant to be used.
+That larger framework is called the Candidate Body of Knowledge,
+or the C B O K.
 
-The CFA Program is designed to test mastery of the knowledge, skills, and abilities needed in investment work.
+Pausa.
 
-That larger body of knowledge is called the Candidate Body of Knowledge, or the C B O K.
+The reading points to four anchors.
 
-The curriculum points to four anchors.
+- the broad outline of topic areas
+- the topic weights
+- the learning outcome statements
+- and the curriculum itself, including practice questions
 
-First, the broad outline of topic areas.
+The learning outcome statements,
+or L O S,
+are especially important.
 
-Second, the topic weights, which show how heavily each major area is represented.
-
-Third, the learning outcome statements, often called L O S.
-
-And fourth, the curriculum itself, including practice questions.
-
-[pause]
-
-The L O S matter because they tell you what you are actually expected to be able to do.
+They tell you what you are expected to do with the material.
 
 Not just what to recognize.
 
-But what to calculate, interpret, compare, explain, or evaluate.
+But what to explain,
+what to calculate,
+what to interpret,
+and what to compare.
 
-So even in a quiet reading session like this one, it is useful to keep those command words in mind.
+Pausa.
 
-[short pause]
+The curriculum also makes a practical study point.
 
-The text also makes a practical point about study.
+Preparation works best when it is consistent and structured.
 
-Preparation works best when it is orderly and consistent.
-
-A systematic routine matters more than bursts of panic.
-
-The curriculum suggests reviewing the learning outcomes before and after each reading.
-
-That helps you see both the destination and whether you really arrived there.
-
-[pause]
+Readers are encouraged to review the learning outcomes before studying,
+and again after studying,
+to confirm that the assigned content was actually mastered.
 
 The book also notes that successful candidates often report more than three hundred hours of preparation for each exam.
 
-That number is not a law.
+That number is not a promise.
+And it is not a threat.
 
-But it does set the tone.
+It is simply a reminder that this exam rewards repetition,
+method,
+and patience.
 
-This is not a casual exam.
+Pausa.
 
-It rewards repetition, structure, and patient contact with the material.
+The text also reminds candidates that the Learning Ecosystem is included with registration,
+and that some prerequisite knowledge is assumed,
+especially in statistics,
+economics,
+and accounting.
 
-[short pause]
+So the opening message of the curriculum is calm,
+but it is serious.
 
-Candidates also receive access to the Learning Ecosystem, the digital platform with lessons, practice questions, and mock exam support.
+Use the learning outcomes.
+Study steadily.
+Practice often.
+And build genuine understanding.
 
-And the curriculum reminds readers that some basic background is assumed, especially in statistics, economics, and accounting.
+## Learning Module One
 
-So even at the very start, the message is calm but serious:
+[Schermo: Rates and Returns]
 
-work steadily,
+The first quantitative module is called Rates and Returns.
 
-use the learning outcomes,
+This is a very appropriate starting point,
+because finance keeps returning to the same basic question.
 
-practice often,
+What is the value of cash,
+when that cash arrives at different times,
+and under different risks.
 
-and build real understanding.
+Pausa.
 
-[page turn]
+The learning outcomes for this module are broad.
 
-Now we enter the first quantitative module:
+They ask the candidate to interpret interest rates in different ways.
 
-Rates and Returns.
+They ask the candidate to break an interest rate into core components.
 
-This reading is foundational.
+They ask the candidate to calculate several types of returns.
 
-Because in finance, interest rates and return measures appear everywhere.
+And they ask the candidate to choose the right return measure for the right problem.
 
-In valuation,
+Pausa.
 
-in portfolio analysis,
+In this first episode we stay with the opening block.
 
-in performance reporting,
+- what interest rates mean
+- what tends to determine them
+- how return is built from income and price change
+- and why different averages give different stories
 
-in fixed income,
+## What An Interest Rate Means
 
-in equity,
+[Schermo: Time Value of Money]
 
-and in everyday investment decisions.
+The reading begins with a direct point.
 
-[pause]
+Interest rates are critical in finance.
 
-The learning outcomes for this module ask you to do a few core things.
+Sometimes the rate is given.
+Sometimes the rate is what we are solving for.
 
-Interpret interest rates in different ways.
+But in either case,
+the rate links cash flows that occur at different dates.
 
-Break an interest rate into its building blocks.
+Pausa.
 
-Calculate different types of returns.
+This is the logic of time value of money.
 
-Compare money-weighted and time-weighted returns.
+Cash today is preferred to cash in the future,
+all else equal.
 
-Annualize returns.
+So if we want to compare present cash with future cash,
+we need a consistent basis for the trade-off.
 
-Work with continuously compounded returns.
+The interest rate is that basis.
 
-And describe major return measures and when to use them.
+Pausa.
 
-[short pause]
+The curriculum uses a simple illustration.
 
-For this first episode, we focus on the opening structure:
+If nine thousand five hundred dollars today is considered equivalent to ten thousand dollars one year from now,
+the extra five hundred dollars is the compensation for waiting.
 
-what an interest rate means,
+Divide five hundred by nine thousand five hundred,
+and the rate is about five point two six percent.
 
-what determines it,
+Pausa.
 
-and how basic return measurement begins.
+The reading then gives three interpretations of an interest rate.
 
-[pause]
+- required rate of return
+- discount rate
+- opportunity cost
 
-The reading starts with a simple but important claim:
+Each interpretation is slightly different in tone,
+but they all refer to the same basic relationship.
 
-interest rates are a critical concept in finance.
+Pausa.
 
-Sometimes the rate is given to us.
+As a required rate of return,
+the interest rate is the minimum return an investor must receive in order to accept an investment.
 
-Other times, the rate is what we are trying to solve for.
+As a discount rate,
+the interest rate is the rate that makes a future cash flow equivalent to a present value.
 
-But in either case, the rate links cash flows that happen at different moments in time.
+As an opportunity cost,
+the interest rate is the value forgone when current consumption is chosen instead of saving and investing.
 
-[pause]
-
-That is really the heart of time value of money.
-
-Cash today is not the same as cash later.
-
-If someone offers you money now, or a larger amount one year from now, you need a way to decide when those two choices are equivalent.
-
-The interest rate is the rate that creates that equivalence.
-
-[short pause]
-
-The curriculum gives a simple example.
-
-Suppose nine thousand five hundred dollars today is considered equivalent to ten thousand dollars one year from now.
-
-The extra five hundred dollars is the compensation for waiting.
-
-If we divide that five hundred by the nine thousand five hundred invested today, we get about five point two six percent.
-
-That percentage is the interest rate.
-
-[pause]
-
-And the reading says we can think about that rate in three different ways.
-
-These three interpretations are worth slowing down for.
-
-[short pause]
-
-First, an interest rate can be seen as a required rate of return.
-
-That means the minimum return an investor needs in order to accept an investment.
-
-If the expected return is below that threshold, the investment is not attractive enough.
-
-[pause]
-
-Second, an interest rate can be seen as a discount rate.
-
-A discount rate is what we use to translate a future cash flow into a present value.
-
-In the example we just mentioned, five point two six percent is the rate that makes ten thousand dollars in one year equal in value to nine thousand five hundred dollars today.
-
-[pause]
-
-Third, an interest rate can be seen as an opportunity cost.
-
-Opportunity cost is the value of the next best alternative you give up.
-
-If you choose to consume today instead of saving and investing, you give up the return you could have earned.
-
-So the interest rate is also the cost of current consumption.
-
-[pause]
+Pausa lunga.
 
 Required return.
-
 Discount rate.
-
 Opportunity cost.
 
-Three phrases,
+Three labels.
 
-but one underlying relationship between cash flows across time.
+One time-based trade-off.
 
-[page turn]
+## The Building Blocks Of A Market Rate
 
-The reading then moves from the meaning of interest rates to the determinants of interest rates.
+[Schermo: Real risk-free rate plus risk premia]
 
-Economics tells us that market interest rates are shaped by supply and demand.
+The reading then asks a more detailed question.
 
-Investors supply funds.
+If we observe a market interest rate,
+what is inside it.
 
-Borrowers demand funds.
+From the investor's point of view,
+the curriculum breaks the market rate into a real risk-free rate,
+plus a set of premiums.
 
-But from the investor's point of view, we can go further and describe an interest rate as a collection of components.
+The full structure is:
 
-[short pause]
+- real risk-free rate
+- inflation premium
+- default risk premium
+- liquidity premium
+- maturity premium
 
-The curriculum expresses the market interest rate as:
+Pausa.
 
-the real risk-free rate,
-
-plus an inflation premium,
-
-plus a default risk premium,
-
-plus a liquidity premium,
-
-plus a maturity premium.
-
-[pause]
-
-This decomposition is fundamental.
-
-Because when rates differ across securities, we want to understand why.
-
-Is inflation expected to be higher.
-
-Is default risk greater.
-
-Is the bond harder to sell quickly.
-
-Is the maturity longer.
-
-Or is the pure time value of money itself different.
-
-[short pause]
-
-Let us take these one at a time.
-
-[pause]
+Let us take them in order.
 
 The real risk-free rate is the single-period rate for a completely risk-free security in a world with no expected inflation.
 
-In theory, it reflects people's time preference for current real consumption versus future real consumption.
+In theory,
+it reflects pure time preference,
+the reward for giving up current real consumption in exchange for future real consumption.
 
-In plain language, it captures the basic reward for waiting, before layering in inflation or risk.
+Pausa.
 
-[pause]
+The inflation premium compensates investors for expected inflation over the life of the debt.
 
-Then comes the inflation premium.
+Inflation matters because it reduces purchasing power.
 
-This compensates investors for expected inflation over the life of the debt.
+Future dollars may arrive in full,
+and still buy less.
 
-If inflation rises, the purchasing power of future cash declines.
+Pausa.
 
-So investors demand additional compensation.
+The default risk premium compensates investors for the possibility that the borrower does not pay in the promised amount,
+or at the promised time.
 
-[short pause]
+This is the classic credit-risk component.
 
-Next is the default risk premium.
+Pausa.
 
-This compensates investors for the chance that the borrower fails to make promised payments, either on time or in full.
+The liquidity premium compensates investors for the possibility that an asset may need to be sold quickly at a price below fair value.
 
-The greater the perceived credit risk, the larger this premium tends to be.
+Highly liquid instruments can usually be bought or sold with little price disruption.
 
-[pause]
+Less liquid instruments can impose friction,
+delay,
+and price concessions.
 
-Then we have the liquidity premium.
+Pausa.
 
-Liquidity is about how easily an asset can be converted into cash near its fair value.
+The maturity premium compensates investors for the increased sensitivity of longer-term debt to changes in market rates.
 
-Highly liquid assets can be sold quickly with little price impact.
+All else equal,
+longer maturities tend to carry more exposure to rate movements.
 
-Illiquid assets may require a discount to sell fast.
+Pausa.
 
-So investors usually demand extra return for holding assets that are harder to trade.
+The curriculum then highlights the nominal risk-free rate.
 
-[pause]
+The exact relationship is:
 
-And finally, the maturity premium.
+- one plus nominal risk-free rate
+- equals one plus real risk-free rate
+- times one plus inflation premium
 
-This compensates investors for the added sensitivity of longer-term debt to changes in market interest rates.
+In practice,
+this is often approximated more simply as:
 
-All else equal, the longer the maturity, the greater the exposure to rate movements.
+- nominal risk-free rate equals real risk-free rate plus inflation premium
 
-That generally supports a positive maturity premium on longer-dated debt.
+Pausa.
 
-[short pause]
+That approximation is common.
 
-The reading also highlights the nominal risk-free rate.
+But it is useful to remember that the exact form is multiplicative,
+not merely additive.
 
-This is the combination of the real risk-free rate and the inflation premium.
+Pausa.
 
-In multiplicative form, the curriculum shows:
+The book also notes that short-term government securities are often used as practical nominal risk-free proxies for a given horizon in a given country.
 
-one plus the nominal risk-free rate,
+For the United States,
+a ninety-day Treasury bill is a common example for a short horizon.
 
-equals one plus the real risk-free rate,
+And quoted rates are usually annualized,
+which means the stated percentage is not necessarily the simple gain over that exact short period.
 
-times one plus the inflation premium.
+## Reading Rates Through Comparison
 
-[pause]
+[Schermo: Comparing debt securities]
 
-But in everyday use, especially when the numbers are not huge, we often approximate it more simply:
+![Original PDF page 19 - Example 1 and Exhibit 1, determining interest rates](../cfa-reading-session/episode-01/visuals/pdf-original/page-019-original.png)
 
-nominal risk-free rate,
+The first worked example in the reading compares five debt securities.
 
-equals real risk-free rate,
+Each security promises a single payment at maturity.
 
-plus inflation premium.
+And the example asks us to assume that the premiums relating to inflation,
+liquidity,
+and default risk are constant across all time horizons.
 
-[pause]
+The point of the example is to isolate what a rate is paying you for.
 
-That approximation is common and useful.
+Pausa.
 
-Still, it helps to remember that the exact relationship is multiplicative, not just additive.
+Investment one:
+two-year maturity,
+high liquidity,
+low default risk,
+two percent interest rate.
 
-[short pause]
+Investment two:
+same two-year maturity,
+low liquidity,
+low default risk,
+two point five percent interest rate.
 
-The text then gives a practical country example.
+Investment three:
+seven-year maturity,
+low liquidity,
+low default risk,
+rate unknown.
 
-Short-term government debt is often treated as a proxy for the nominal risk-free rate for that horizon in that country.
+Investment four:
+eight-year maturity,
+high liquidity,
+low default risk,
+four percent interest rate.
 
-For the United States, a ninety-day Treasury bill is often used for a short-term nominal risk-free benchmark.
+Investment five:
+eight-year maturity,
+low liquidity,
+high default risk,
+six point five percent interest rate.
 
-The important nuance is that quoted rates are usually annualized.
+Pausa.
 
-So a three percent quoted rate on a ninety-day security is not the actual three-month dollar gain.
+The first comparison is between investments one and two.
 
-It is the annualized version of that short-term rate.
+Same maturity.
+Same default risk.
+Different liquidity.
 
-[pause]
+So the extra zero point five percent on investment two is interpreted as a liquidity premium.
 
-At this point, the big picture becomes clearer.
+Pausa.
 
-No matter whether we call a rate a required return, a discount rate, or an opportunity cost,
+The second comparison is between investments four and five.
 
-the rate reflects the real risk-free component plus a set of premiums tied to inflation, default, liquidity, and maturity.
-
-And because those underlying forces change over time,
-
-interest rates change over time as well.
-
-[page turn]
-
-The curriculum then uses a debt security example to help identify these components.
-
-This is the kind of example that is worth reading slowly, because it trains the eye to compare instruments feature by feature.
-
-[short pause]
-
-We are given five investments.
-
-All of them promise a single payment at maturity.
-
-And we assume that inflation, liquidity, and default-related patterns are stable across time horizons in the setup.
-
-[pause]
-
-Investment one has a two-year maturity, high liquidity, low default risk, and an interest rate of two percent.
-
-Investment two also has a two-year maturity and low default risk, but lower liquidity, and its rate is two point five percent.
-
-Investment three has a seven-year maturity, low liquidity, low default risk, and an unknown rate.
-
-Investment four has an eight-year maturity, high liquidity, low default risk, and a rate of four percent.
-
-Investment five has an eight-year maturity, low liquidity, high default risk, and a rate of six point five percent.
-
-[pause]
-
-The first question asks:
-
-why is investment two's interest rate higher than investment one's.
-
-The answer is liquidity.
-
-The maturity is the same.
-
-Default risk is the same.
-
-But investment two is less liquid.
-
-So the extra zero point five percent is interpreted as a liquidity premium.
-
-[pause]
-
-The second question asks us to estimate the default risk premium.
-
-To do that, we compare investments four and five.
-
-They have the same maturity of eight years.
-
+Same maturity.
 But investment five has higher default risk and lower liquidity.
 
-Its rate is six point five percent, versus four percent for investment four.
+Its rate exceeds investment four by two point five percent.
 
-So the total difference is two point five percent.
+From the earlier comparison,
+we already inferred a liquidity premium of zero point five percent.
 
-[short pause]
+Subtract that from the total difference,
+and the remaining two percent is interpreted as default risk premium.
 
-From the earlier comparison, we already inferred a liquidity premium of zero point five percent.
+Pausa.
 
-If we subtract that from the two point five percent difference,
+The third step is to reason about investment three.
 
-the remaining two percent is attributed to default risk.
+Investment three is less liquid than investment four,
+and has a slightly shorter maturity.
 
-So the example implies a default risk premium of two percent.
+Relative to investment two,
+it has similar liquidity and default characteristics,
+but longer maturity.
 
-[pause]
+So its rate should be above two point five percent.
 
-The third question is more subtle.
+Relative to investment four,
+if we imagined four with low liquidity,
+we would get something like four point five percent.
 
-We need a range for the unknown rate on investment three.
+That suggests a reasonable range for investment three somewhere between two point five percent and four point five percent.
 
-Investment three shares low liquidity and low default risk characteristics with investment two,
-
-but it has a longer maturity.
-
-That means its maturity premium should be higher.
-
-So its rate should be above two point five percent, which is the rate on investment two.
-
-[pause]
-
-At the same time, investment four has eight years to maturity, high liquidity, and low default risk, with a four percent rate.
-
-If investment four were also illiquid, its rate might be roughly four point five percent after adding the estimated liquidity premium.
-
-Because investment three has low liquidity but a slightly shorter maturity than investment four,
-
-the reading suggests that a reasonable expected range is between two point five percent and four point five percent.
-
-[pause]
+Pausa lunga.
 
 One more time, slowly.
 
 Investment three should be above investment two,
-
 because it has the same low liquidity and low default risk,
-
 but a longer maturity.
 
 That gives the lower bound:
-
 above two point five percent.
 
 And investment three should stay below the low-liquidity version of investment four.
 
 That gives the upper guide:
-
 below about four point five percent.
 
 So the memory hook is simple:
-
 two point five to four point five percent.
 
-[pause]
+Pausa.
 
-This kind of reasoning matters.
+This is good finance training.
 
-Not because every exam question will look exactly like this,
+Hold other things constant.
+Change one feature.
+Observe the pricing implication.
 
-but because finance often asks you to isolate one difference at a time.
+Rates stop looking random.
+They start looking like structured compensation.
 
-Same maturity, different liquidity.
+## Return Basics
 
-Same liquidity, different default risk.
+[Schermo: Income return plus capital gain or loss]
 
-Same risk, different maturity.
+After interest rates,
+the reading turns to return measurement.
 
-You learn to read rates like clues.
+And here the text reminds us that financial assets usually generate return in two ways.
 
-[page turn]
+- periodic income, such as dividends or interest
+- changes in price, creating a capital gain or loss
 
-After interest rates, the module turns toward rates of return.
+Some assets mainly pay income.
+Some mainly move in price.
+Some do both.
 
-And here the reading makes another core point:
+Pausa.
 
-financial assets are often described through return and risk.
+The first return measure introduced is the holding period return.
 
-Those two dimensions help investors compare opportunities and build portfolios.
+A holding period return is the return earned over one specified holding period.
 
-[pause]
-
-The text says financial assets usually generate return in one of two ways, and sometimes in both.
-
-First, they can provide periodic income, such as dividends or interest.
-
-Second, they can rise or fall in price, creating a capital gain or a capital loss.
-
-[short pause]
-
-Some assets mainly deliver price movement.
-
-Some mainly deliver income.
-
-And many provide both.
-
-Understanding total return means combining those sources correctly.
-
-[pause]
-
-The first measure introduced is the holding period return.
-
-A holding period return is simply the return earned over one specific holding period.
-
-That period can be a day,
-
+That period could be a day,
 a month,
-
 a quarter,
-
 a year,
+or even several years,
+as long as the period is clearly defined.
 
-or several years.
+Pausa.
 
-The idea is flexible.
+The formula combines both sources of gain.
 
-[pause]
-
-If an asset is bought at price P zero,
-
-later sold at price P one,
-
-and it generates income I one during the period,
-
-then the holding period return is:
-
-P one minus P zero,
-
-plus I one,
-
-all divided by P zero.
-
-[short pause]
+- ending price minus beginning price
+- plus income received during the period
+- all divided by beginning price
 
 In words,
+capital gain or loss plus income,
+over the initial investment.
 
-capital gain or loss,
+Pausa.
 
-plus income,
-
-divided by the starting price.
-
-[pause]
-
-The curriculum gives a simple version first.
-
-If you buy at one hundred and sell at one hundred five, with no income,
-
+If an asset is bought at one hundred,
+and sold at one hundred five,
+with no income,
 the holding period return is five percent.
 
-If the asset also pays two of income by the end of the period,
-
+If the same asset also pays two of income during the period,
 the total return becomes seven percent.
 
-[pause]
+Pausa.
 
-This formula lets us separate return into two pieces:
+The curriculum then gives a stock example.
 
-income yield,
+An investor buys one hundred shares at thirty-four dollars and fifty cents per share.
 
-and capital gain yield.
+Later,
+the shares are sold at thirty dollars and fifty cents,
+and the investor receives a total dividend payment of fifty-one dollars and fifty-five cents.
 
-That distinction is useful, because two investments may have the same total return but very different composition.
+Total dividend.
+Not fifty-one dollars and fifty-five cents per share.
 
-[short pause]
+The resulting holding period return is negative ten point one percent.
 
-The text also points out that if income is received before the end of the period and reinvested,
+Pausa.
 
-the realized holding period return may be higher than a simple end-of-period treatment suggests.
+That total return includes two pieces.
 
-So timing can matter.
+- a positive dividend yield
+- a larger capital loss
 
-[pause]
+The formula keeps the logic clean.
 
-The module then reminds us that return can be written in decimal form,
+Income helps.
+Price decline hurts more.
+The net result is negative.
 
-fraction form,
+Pausa.
 
-or percent form.
+The reading also reminds us that if income is received before the end of the period,
+and then reinvested,
+the realized return could end up higher than a simple end-of-period treatment suggests.
 
-Zero point zero seven,
+So even at the level of a basic holding period return,
+timing still matters.
 
-seven over one hundred,
+## Multi-Period Return And The Arithmetic Mean
 
-or seven percent.
+[Schermo: One-period average versus multi-period compounding]
 
-They are the same idea expressed differently.
+Once we move from one period to many periods,
+return measurement becomes more subtle.
 
-[pause]
+If there are several annual returns,
+we need to decide what kind of summary we want.
 
-A holding period return can also span multiple years.
+Pausa.
 
-If you want the return over three annual periods, you compound:
+The simplest summary is the arithmetic mean return.
 
-one plus return one,
+Add the periodic returns.
+Divide by the number of periods.
 
-times one plus return two,
+That gives the average one-period return.
 
-times one plus return three,
+Pausa.
 
-minus one.
+The curriculum uses a three-year sequence:
 
-That gives the total return over the entire three-period horizon.
+- negative fifty percent
+- positive thirty-five percent
+- positive twenty-seven percent
 
-[page turn]
+The arithmetic mean of those three returns is four percent.
 
-Once we have multiple holding period returns, we need a way to summarize them.
+Pausa.
 
-And this is where the reading introduces different mean calculations.
+That number is easy to compute.
 
-Not because finance enjoys complexity for its own sake,
+And it does have value.
 
-but because different questions require different averages.
+If you want the average single-period return,
+the arithmetic mean is the natural summary.
 
-[short pause]
+But it does not describe the actual compounded growth path across several periods.
 
-The simplest is the arithmetic mean return.
+That is the crucial limitation.
 
-This is the ordinary average of periodic returns.
+## Geometric Mean Return
 
-Add the returns across periods,
+[Schermo: Compounded growth]
 
-then divide by the number of periods.
+![Original PDF page 22 - Exhibit 2, portfolio value and performance](../cfa-reading-session/episode-01/visuals/pdf-original/page-022-original.png)
 
-[pause]
+To capture compounded growth,
+the curriculum uses the geometric mean return.
 
-The curriculum gives a three-year sequence:
+The geometric mean answers a different question.
 
-negative fifty percent,
+What constant periodic return would reproduce the same ending value over the whole horizon.
 
-positive thirty-five percent,
-
-and positive twenty-seven percent.
-
-If you average those three numbers directly, you get four percent per year.
-
-[pause]
-
-This arithmetic average is easy to compute.
-
-It is widely used.
-
-And it has useful statistical properties.
-
-If you want the average one-period return,
-
-the arithmetic mean is the right instinct.
-
-But it has an important weakness:
-
-it does not capture compounding properly across multiple periods.
-
-[short pause]
-
-That brings us to the geometric mean return.
-
-The geometric mean is designed for compounded growth.
-
-It answers a practical question:
-
-what constant rate per period would reproduce the same final ending value over the whole horizon.
-
-[pause]
+Pausa.
 
 Using the same three returns,
-
-minus fifty,
-
-plus thirty-five,
-
-plus twenty-seven,
-
+negative fifty percent,
+positive thirty-five percent,
+and positive twenty-seven percent,
 the geometric mean is negative five percent.
 
 If we slow down the arithmetic,
-
 the compound path is:
 
 zero point five,
-
 times one point three five,
-
 times one point two seven.
 
 That product is about zero point eight five seven three.
 
 Then we take the cube root,
-
 because there are three annual periods,
-
 and subtract one.
 
 That gives approximately negative five percent per year.
 
-That is a huge difference from the arithmetic mean of positive four percent.
+That is a dramatic difference from the arithmetic mean of positive four percent.
 
-[pause]
+Pausa.
 
-Why is the gap so large.
+Why does that happen.
 
-Because the path matters.
+Because returns compound on changing bases.
 
-Losing fifty percent cuts the base in half.
+After a fifty percent loss,
+the portfolio is cut in half.
 
-Then later gains compound on that smaller base.
+Later gains are applied to that smaller base.
 
-So a simple average overstates the actual growth experience.
+So a simple average can be very misleading when returns move sharply up and down.
 
-[short pause]
+Pausa.
 
-The curriculum illustrates this with an investment starting at one unit of currency.
+The curriculum illustrates this by starting with one unit of currency.
 
-After minus fifty percent in year one, the value falls to zero point five.
+After year one at negative fifty percent,
+the value falls to zero point five.
 
-After a thirty-five percent return in year two, it rises to zero point six seven five.
+After year two at positive thirty-five percent,
+the value rises to zero point six seven five.
 
-After a twenty-seven percent return in year three, it ends near zero point eight five seven.
+After year three at positive twenty-seven percent,
+the value ends around zero point eight five seven.
 
-[pause]
+Pausa.
 
-Now compare that with what would happen if you naively compounded the arithmetic mean of four percent for three years.
+Now compare that actual path with what would happen if we applied the arithmetic mean of four percent each year for three years.
 
-You would get about one point one two five.
+That would produce about one point one two five.
 
-That is far above the actual ending value.
+And that is far above the actual ending value.
 
-So the arithmetic mean gives a distorted picture of multi-period growth in this case.
+So in this example,
+the arithmetic mean overstates the multi-period investment experience.
 
-[pause]
+Pausa lunga.
 
-This is one of the most important practical takeaways from the reading:
+This is one of the most important messages in the opening reading.
 
-for historical multi-period investment growth,
+If you want to summarize historical growth across multiple periods,
+the geometric mean is usually the more faithful measure.
 
-the geometric mean is generally the more faithful summary.
+If you want a simple average of one-period returns,
+the arithmetic mean still has an important role.
 
-For average one-period expected return,
+## More Return Examples
 
-the arithmetic mean remains useful.
+[Schermo: Worked examples]
 
-[short pause]
+![Original PDF page 23 - Example 2, Example 3, and Exhibit 3](../cfa-reading-session/episode-01/visuals/pdf-original/page-023-original.png)
 
-The curriculum then gives a few shorter examples.
+![Original PDF page 24 - Example 4, Exhibit 4, and beginning of Exhibit 5](../cfa-reading-session/episode-01/visuals/pdf-original/page-024-original.png)
 
-An investor buys one hundred shares at thirty-four dollars and fifty cents each.
+The module adds two more quick examples.
 
-Later, the shares are sold at thirty dollars and fifty cents,
-
-and a total dividend payment of fifty-one dollars and fifty-five cents is received.
-
-Total dividend.
-
-Not fifty-one dollars and fifty-five cents per share.
-
-The holding period return is negative ten point one percent.
-
-[pause]
-
-That result contains both pieces.
-
-There is a small positive dividend yield,
-
-but a larger capital loss.
-
-Together, they produce the negative total return.
-
-[short pause]
-
-Another example gives annual mutual fund returns of positive fourteen percent,
-
+First,
+a mutual fund posts annual returns of positive fourteen percent,
 negative ten percent,
-
 and negative two percent.
 
-Compounding them across three years gives a total three-year holding period return of about zero point five five percent.
+When those returns are compounded over the full three-year span,
+the total holding period return is about zero point five five percent.
 
-Notice how that is not the same as adding and averaging the annual returns.
+Pausa.
 
-The correct multi-period total requires compounding.
-
-[pause]
-
-The hedge fund example then uses returns of positive twenty-two percent,
-
+Second,
+a hedge fund posts annual returns of positive twenty-two percent,
 negative twenty-five percent,
-
 and positive eleven percent.
 
-The geometric mean over the three years comes out to about zero point five two percent.
+The geometric mean return over those three years is about zero point five two percent.
 
-Again, the geometric mean translates a jagged path into one equivalent compounded average rate.
+Pausa.
 
-[page turn]
+These examples reinforce the same lesson.
 
-The reading also compares arithmetic and geometric mean returns across a set of country stock indexes.
+The average return you report depends on the question you are asking.
 
-The detailed table is less important than the pattern.
+Do you want average one-period performance.
 
-For each country shown,
+Or do you want the constant compounded rate that matches the actual ending wealth.
 
-the geometric mean is less than or equal to the arithmetic mean.
+That distinction matters.
 
-And the difference grows as variability increases.
+## Variability And The Gap Between Means
 
-[pause]
+[Schermo: Arithmetic mean versus geometric mean]
 
-That principle is worth storing carefully:
+![Original PDF page 25 - continuation of Exhibit 5 and mean calculations](../cfa-reading-session/episode-01/visuals/pdf-original/page-025-original.png)
 
-the more volatile the sequence of returns,
+![Original PDF page 26 - Exhibit 6, arithmetic and geometric mean chart](../cfa-reading-session/episode-01/visuals/pdf-original/page-026-original.png)
 
-the bigger the potential gap between arithmetic and geometric means.
+The curriculum then compares arithmetic and geometric means across several country stock indexes.
 
-If returns are identical every period,
+The details vary by country,
+but the pattern is stable.
 
-the two means are the same.
+The geometric mean is always less than or equal to the arithmetic mean.
 
-If returns bounce around,
+And the difference grows when variability grows.
 
-the arithmetic mean pulls away above the geometric mean.
+Pausa.
 
-[short pause]
+That is an elegant principle.
 
-The curriculum explicitly says that the geometric mean is always less than or equal to the arithmetic mean.
+When returns are identical each period,
+there is no volatility drag,
+and the arithmetic and geometric means are equal.
 
-Equality occurs only when there is no variability in the observations.
+When returns fluctuate,
+the arithmetic mean tends to sit above the geometric mean.
 
-[pause]
+The more dispersion there is,
+the bigger the gap can become.
 
-So, when reporting actual historical investment performance over multiple periods,
+Pausa.
 
-the geometric mean is usually the better summary.
+This is why a simple average can flatter a choppy return series.
 
-When estimating the average return for a single future period,
+And it is why the geometric mean is so important for performance reporting over time.
 
-the arithmetic mean is usually the better summary.
+## Harmonic Mean
 
-[page turn]
+[Schermo: Ratios, multiples, and outliers]
 
-After arithmetic and geometric means, the module introduces the harmonic mean.
+![Original PDF page 27 - Example 6, cost averaging and harmonic mean](../cfa-reading-session/episode-01/visuals/pdf-original/page-027-original.png)
+
+![Original PDF page 28 - Example 7 and Exhibit 7, P E ratios](../cfa-reading-session/episode-01/visuals/pdf-original/page-028-original.png)
+
+![Original PDF page 29 - Example 7 calculations and Exhibit 8 setup](../cfa-reading-session/episode-01/visuals/pdf-original/page-029-original.png)
+
+The reading then introduces the harmonic mean.
 
 This is a more specialized measure of central tendency.
 
-And it is especially useful when dealing with rates and ratios.
+It is especially useful when the data are rates or ratios,
+and when we want to reduce the influence of very large outliers.
 
-[short pause]
+Pausa.
 
-The harmonic mean is based on reciprocals.
+The harmonic mean is built from reciprocals.
 
-You take the reciprocal of each observation,
+Take the reciprocal of each observation.
+Average those reciprocals.
+Then take the reciprocal of that average.
 
-average those reciprocals,
+Pausa.
 
-and then take the reciprocal of that average.
+A simple illustration uses price-to-earnings ratios.
 
-[pause]
-
-The reading notes that the harmonic mean gives less influence to large outliers.
-
-That is why it can be very useful for averaging valuation multiples like price-to-earnings ratios.
-
-[short pause]
-
-For example, if three companies have P E ratios of forty-five,
-
+If three peer companies have P E ratios of forty-five,
 fifteen,
-
 and fifteen,
-
 the arithmetic mean is twenty-five.
 
-But the harmonic mean is lower, around nineteen point three,
+But the harmonic mean is lower,
+around nineteen point three,
+because the very high outlier gets less influence.
 
-because it dampens the effect of the very high outlier.
+Pausa.
 
-[pause]
+The curriculum also gives a cost-averaging example.
 
-The curriculum also uses a cost averaging example.
+An investor puts one thousand euro into the same stock in two different months.
 
-Suppose an investor puts one thousand euro into the same stock in two different months.
+The share price is ten euro in the first month,
+and fifteen euro in the second month.
 
-In the first month, the share price is ten euro.
+At ten euro,
+one thousand euro buys one hundred shares.
 
-In the second month, the share price is fifteen euro.
+At fifteen euro,
+one thousand euro buys about sixty-six point six seven shares.
 
-[short pause]
+Across both months,
+the investor spends two thousand euro and acquires about one hundred sixty-six point six seven shares.
 
-At ten euro per share, one thousand euro buys one hundred shares.
+The average price paid per share is therefore twelve euro.
 
-At fifteen euro per share, one thousand euro buys about sixty-six point six seven shares.
-
-Across both months, the investor spends two thousand euro and acquires about one hundred sixty-six point six seven shares.
-
-So the average price paid per share is twelve euro.
-
-[pause]
+Pausa.
 
 That twelve-euro figure is the harmonic mean of ten and fifteen.
 
-And that is the key insight:
+And that is the key intuition.
 
-when you repeatedly apply ratios like price per share to a fixed amount of money,
+When a fixed amount of money is repeatedly applied to different prices,
+the harmonic mean can describe the effective average price paid.
 
-the harmonic mean can describe the effective average.
-
-[short pause]
+Pausa.
 
 The reading gives one more numerical illustration using ten favorite stocks and their P E ratios.
 
-For that group, the arithmetic mean P E is about twelve point one five.
+For that group,
+the arithmetic mean P E is about twelve point one five.
 
 The geometric mean is about eleven point four three.
 
 And the harmonic mean is about ten point eight one.
 
-[pause]
+Pausa.
 
-So again we see the usual ordering:
+Keeping those to two decimals makes the comparison clean:
+twelve point one five,
+eleven point four three,
+ten point eight one.
 
-harmonic mean,
+The usual ordering still holds.
 
+Harmonic mean,
 then geometric mean,
-
 then arithmetic mean.
 
-Unless all the observations are the same,
+## Choosing The Right Mean
 
-the harmonic mean is the smallest,
+[Schermo: Which measure belongs to which problem]
 
-the arithmetic mean is the largest,
+![Original PDF page 30 - Exhibit 8 and Exhibit 9 question set](../cfa-reading-session/episode-01/visuals/pdf-original/page-030-original.png)
 
-and the geometric mean sits in between.
+The reading also mentions two related tools for reducing the effect of outliers.
 
-[page turn]
+- the trimmed mean
+- the winsorized mean
 
-The module then briefly mentions two other ways to reduce the effect of outliers:
-
-the trimmed mean and the winsorized mean.
-
-[short pause]
-
-A trimmed mean removes a small percentage of the most extreme high and low observations,
-
-then averages what remains.
+A trimmed mean removes a small percentage of the most extreme observations before averaging.
 
 A winsorized mean keeps the dataset size the same,
+but replaces extreme observations with less extreme neighboring values before averaging.
 
-but replaces extreme values with the nearest less extreme observations before averaging.
+Pausa.
 
-[pause]
+The broader point is not that one mean is always best.
 
-Both are designed to limit the influence of outliers.
+The broader point is that the analyst has to match the measure to the problem.
 
-And the larger lesson is not that one measure is always superior.
+The curriculum's practical logic is very clear.
 
-The larger lesson is that the analyst must choose a measure that matches the data and the question.
+- if you want an average one-period return, think arithmetic mean
+- if compounding across time matters, think geometric mean
+- if the data are ratios or very sensitive to extreme outliers, think harmonic mean, trimmed mean, or winsorized mean
 
-[pause]
+Pausa lunga.
 
-The curriculum summarizes that choice through a simple decision logic.
+In other words,
+the formula is never the whole story.
 
-If compounding matters,
+You also need to ask what the formula is supposed to measure,
+and what it might distort if used in the wrong setting.
 
-the geometric mean is often appropriate.
+## Closing
 
-If you want a straightforward average of one-period values,
+[Schermo: Session recap]
 
-the arithmetic mean is often appropriate.
+Let us close by gathering the core ideas from this first session.
 
-If the dataset contains extreme outliers,
+An interest rate links cash flows across time.
 
-or if the data are ratios and multiples,
-
-the harmonic mean, trimmed mean, or winsorized mean may be more suitable.
-
-[short pause]
-
-That is a very analyst-like habit of mind.
-
-Do not ask only,
-
-"What is the formula?"
-
-Ask also,
-
-"What is this formula trying to measure?"
-
-And,
-
-"What distortion might this formula create if I use it in the wrong setting?"
-
-[pause]
-
-As we come to the end of this first session, let us gather the key ideas quietly.
-
-[short pause]
-
-An interest rate connects cash flows across time.
-
-It can be viewed as a required return,
-
+It can be interpreted as a required return,
 a discount rate,
-
 or an opportunity cost.
 
-[pause]
+Pausa.
 
-A market interest rate can be decomposed into:
-
-the real risk-free rate,
-
-plus premiums for expected inflation,
-
+A market interest rate can be read as the real risk-free rate plus compensation for expected inflation,
 default risk,
-
 liquidity risk,
-
 and maturity risk.
 
-[pause]
+Pausa.
 
 A financial asset's total return usually comes from income,
-
 from price change,
-
 or from both.
 
-[pause]
+The basic holding period return combines those pieces in a single measure.
 
-The holding period return measures return over one specified period.
+Pausa.
 
-For multiple periods, compounding matters.
-
-[pause]
+When we summarize returns across several periods,
+the arithmetic mean and the geometric mean answer different questions.
 
 The arithmetic mean gives the average one-period return.
 
-The geometric mean gives the compounded growth rate across periods.
+The geometric mean gives the compounded growth rate over time.
 
-And the harmonic mean is especially useful for ratios, multiples, and some outlier-sensitive settings.
+And when the data are ratios or contain strong outliers,
+the harmonic mean can be a better fit.
 
-[pause]
+Pausa.
 
-And one of the most important comparisons in the whole section is this:
-
-when returns vary over time,
-
-the arithmetic mean can overstate the actual compounded growth experience.
-
-That is why the geometric mean is so important in investment performance analysis.
-
-[short pause]
-
-In the next session, we continue this same module with money-weighted and time-weighted returns,
-
+In the next session,
+we stay inside the same learning module,
+and move into money-weighted returns,
+time-weighted returns,
 annualization,
-
 continuous compounding,
-
 and other major return measures.
 
-[pause]
+For now,
+this is the end of episode one.
 
-For now, let the core framework settle.
-
-Rates tell us how time, risk, inflation, and opportunity are priced.
-
-Returns tell us what actually happened to invested capital.
-
-And the choice of measurement changes the story we tell.
-
-[long pause]
-
-This has been CFA Reading Session 01.
-
-Playlist:
-
-CFA Reading Session, Level One, twenty twenty-four.
-
-Episode:
-
-Rates and Returns, part one.
-
-[soft outro]
-
-Rest well,
-
-study well,
-
-and I will see you in the next session.
+Rest well.
+Study well.
+And I will see you in the next reading session.

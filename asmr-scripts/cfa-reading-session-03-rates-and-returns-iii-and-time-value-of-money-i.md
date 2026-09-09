@@ -41,22 +41,6 @@ and dividend models begin to line up into one coherent system.
 
 Pausa lunga.
 
-The playlist name is still simple and correct:
-
-- CFA Reading Session | Level I 2024
-
-And the episode title is also clean and correct:
-
-- CFA Reading Session 03 | Rates and Returns III and Time Value of Money I | Practice Review, Bonds, Mortgages, and Dividend Models
-
-That title is long,
-but usefully long.
-
-It tells the listener that we are still completing the return material,
-while already entering the next valuation framework.
-
-Pausa.
-
 So tonight we will move in two arcs.
 
 In the first arc,
